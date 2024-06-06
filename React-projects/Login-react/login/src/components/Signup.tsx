@@ -2,9 +2,10 @@ import React, { useState, ChangeEvent } from 'react';
 
 interface SignupProps {
   onFormSwitch: () => void;
+  onSignupSuccess: () => void;
 }
 
-const Signup: React.FC<SignupProps> = ({ onFormSwitch }) => {
+const Signup: React.FC<SignupProps> = ({ onFormSwitch, onSignupSuccess }) => {
   const [role, setRole] = useState('user');
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
@@ -60,6 +61,7 @@ const Signup: React.FC<SignupProps> = ({ onFormSwitch }) => {
           });
 
           // TODO: Submit form data to your server or API
+          onSignupSuccess();
         } else {
           alert("Username for admin role must contain '@admin'");
           return;
@@ -78,9 +80,11 @@ const Signup: React.FC<SignupProps> = ({ onFormSwitch }) => {
 
         // TODO: Submit form data to your server or API
       }
+      onSignupSuccess();
     } else {
       alert('Please fill out all fields correctly');
     }
+    
   };
 
   return (

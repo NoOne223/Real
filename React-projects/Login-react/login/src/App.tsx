@@ -10,10 +10,15 @@ function App() {
     setShowSignup(!showSignup);
   };
 
+  const handleSignupSuccess = () => {
+    // Set showSignup to false to switch back to the Login component
+    setShowSignup(false);
+  };
+
   return (
     <div>
       {showSignup ? (
-        <Signup onFormSwitch={handleFormSwitch} />
+        <Signup onFormSwitch={handleFormSwitch} onSignupSuccess={handleSignupSuccess} />
       ) : (
         <Login onFormSwitch={handleFormSwitch} />
       )}
