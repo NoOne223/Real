@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.input-form{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.btn{
+    border: 1px solid transparent;
+    border-radius: 15px;
+    padding: 8px;
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+    border-radius: 5px;
+}
+.form{
+    width: 700px;
+    padding: 70px;
+    border-radius: 15px;
+}
+.form-click:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
