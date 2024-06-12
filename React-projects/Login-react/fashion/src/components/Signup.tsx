@@ -1,12 +1,10 @@
 import React, { useState, ChangeEvent } from 'react';
-import firebase from './Firebase'
-require('firebase/auth')
-
-// import 'firebase/auth';
+import firebase from './Firebase';
+require('firebase/auth');
 
 interface SignupProps {
   onFormSwitch: () => void;
-  onSignupSuccess: () => void;
+  onSignupSuccess: (role: string) => void; // Update the type of onSignupSuccess to accept a role
 }
 
 const Signup: React.FC<SignupProps> = ({ onFormSwitch, onSignupSuccess }) => {
@@ -65,7 +63,7 @@ const Signup: React.FC<SignupProps> = ({ onFormSwitch, onSignupSuccess }) => {
           });
 
           // TODO: Submit form data to your server or API
-          onSignupSuccess();
+          onSignupSuccess(role); // Pass the role back to the parent component
         } else {
           alert("Username for admin role must contain '@admin'");
           return;
@@ -83,21 +81,21 @@ const Signup: React.FC<SignupProps> = ({ onFormSwitch, onSignupSuccess }) => {
         });
 
         // TODO: Submit form data to your server or API
+        onSignupSuccess(role); // Pass the role back to the parent component
       }
-      onSignupSuccess();
     } else {
       alert('Please fill out all fields correctly');
     }
   };
 
   return (
-    <div className='flex items-center h-screen bg-blue-300'>
+    <div className='login-bg flex items-center h-screen'>
       <div className='mx-auto'>
-        <form className='form flex flex-col gap-y-5 bg-red-300' onSubmit={handleSubmit}>
+        <form className='form flex flex-col gap-y-5 bg-white' onSubmit={handleSubmit}>
           <div className='text-center'>
-            <h4 className='text-5xl font-bold text-white'>Sign up for</h4>
+            <h4 className='text-5xl font-bold'>Sign up for</h4>
             <select
-              className='select text-blue-500 mt-3 border-pink-400 border-2 border-solid rounded-md py-1 px-3'
+              className='select mt-3 border-2 border-solid rounded-md py-1 px-3'
               value={role}
               onChange={handleRoleChange}
             >
@@ -106,9 +104,9 @@ const Signup: React.FC<SignupProps> = ({ onFormSwitch, onSignupSuccess }) => {
             </select>
           </div>
           <div className='flex flex-col gap-y-2'>
-            <span className='text-white'>Email</span>
+            <span className=''>Email</span>
             <input 
-              className='input-form text-blue-500' 
+              className='input-form' 
               type='email' 
               value={email}
               onChange={handleEmailChange}
@@ -116,9 +114,9 @@ const Signup: React.FC<SignupProps> = ({ onFormSwitch, onSignupSuccess }) => {
             />
           </div>
           <div className='flex flex-col gap-y-2'>
-            <span className='text-white'>Username</span>
+            <span className=''>Username</span>
             <input 
-              className='input-form text-blue-500' 
+              className='input-form' 
               type='text' 
               value={username}
               onChange={handleUsernameChange}
@@ -131,9 +129,9 @@ const Signup: React.FC<SignupProps> = ({ onFormSwitch, onSignupSuccess }) => {
             )}
           </div>
           <div className='flex flex-col gap-y-2'>
-            <span className='text-white'>Password</span>
+            <span className=''>Password</span>
             <input
-              className={`input-form text-blue-500 ${!passwordMatch && 'border-red-500 text-red-500'}`}
+              className={`input-form ${!passwordMatch && 'border-red-500 text-red-500'}`}
               type='password'
               value={password}
               onChange={handlePasswordChange}
@@ -141,9 +139,9 @@ const Signup: React.FC<SignupProps> = ({ onFormSwitch, onSignupSuccess }) => {
             />
           </div>
           <div className='flex flex-col gap-y-2'>
-            <span className='text-white'>Confirm password</span>
+            <span className=''>Confirm password</span>
             <input
-              className={`input-form text-blue-500 ${!passwordMatch && 'border-red-500 text-red-500'}`}
+              className={`input-form ${!passwordMatch && 'border-red-500 text-red-500'}`}
               type='password'
               value={confirmPassword}
               onChange={handleConfirmPasswordChange}
@@ -154,7 +152,7 @@ const Signup: React.FC<SignupProps> = ({ onFormSwitch, onSignupSuccess }) => {
             )}
           </div>
           <div>
-            <button className='btn bg-blue-500 text-white w-full uppercase' type='submit'>Sign up</button>
+            <button className='btn bg-black text-white w-full uppercase' type='submit'>Sign up</button>
           </div>
           <div className='flex justify-between'>
             <a

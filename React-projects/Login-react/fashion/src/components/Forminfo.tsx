@@ -7,13 +7,33 @@ import {
   Monster20,
 } from '../assets/img/Image';
 
-const Forminfo = () => {
+interface ForminfoProps {
+  role: string;
+}
+
+const Forminfo: React.FC<ForminfoProps> = ({ role }) => {
   const [selectedImage, setSelectedImage] = useState(Monster);
+  const [avtBackgroundColor, setAvtBackgroundColor] = useState('#ffffff');
   const [showImageSelector, setShowImageSelector] = useState(false);
   const [customImage, setCustomImage] = useState<string | ArrayBuffer | null>(null);
 
   const toggleImageSelector = () => {
     setShowImageSelector(!showImageSelector);
+  };
+
+  const avatars = [Monster, Monster1, Monster2, Monster3, Monster4, Monster5, Monster6, Monster7, Monster8, Monster9, Monster10, 
+    Monster11, Monster12, Monster13, Monster14, Monster15, Monster16, Monster17, Monster18, Monster19, Monster20
+  ];
+
+  const selectRandomImage = () => {
+    const randomIndex = Math.floor(Math.random() * avatars.length);
+    setSelectedImage(avatars[randomIndex]);
+    setShowImageSelector(false);
+  };
+
+  const generateRandomColor = () => {
+    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    setAvtBackgroundColor(randomColor);
   };
 
   const selectImage = (img: string) => {
@@ -36,20 +56,19 @@ const Forminfo = () => {
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
-    // handle form submission logic here
   };
 
   return (
-    <div className='flex items-center h-screen bg-blue-300'>
+    <div className='login-bg flex items-center h-screen'>
       <div className='mx-auto'>
-        <form onSubmit={handleSubmit} className='info-form flex flex-col gap-y-5 bg-red-300 p-5'>
+        <form onSubmit={handleSubmit} className='info-form form bg-white flex flex-col gap-y-5 p-5'>
           <div className='text-center'>
             <h2 className='uppercase text-white font-bold text-3xl'>Fill your information</h2>
           </div>
           <div className='flex'>
             <div className='img-area flex flex-col gap-y-5 items-center'>
-              <div className='avt m-auto relative'>
-                <img className='w-full' src={selectedImage} alt='Selected Avatar' />
+              <div className='avt mx-auto relative' style={{ backgroundColor: avtBackgroundColor }}>
+              <img className='w-full' src={selectedImage as string} alt='Selected Avatar' />
                 <div className={`layout ${showImageSelector ? '' : 'hidden'}`} onClick={toggleImageSelector}>
                   <div className='avt-layout'>
                     <i className="fa-solid fa-wand-magic-sparkles text-white text-4xl"></i>
@@ -59,11 +78,12 @@ const Forminfo = () => {
               <div className='flex gap-x-3'>
                 <button 
                   type='button' 
-                  className='change-avt border-2 border-solid p-2 border-blue-500 text-blue-500'
+                  className='change-avt border-2 border-solid p-2 border-black'
+                  onClick={selectRandomImage}
                 >
                   Change avt
                 </button>
-                <button type='button' className='change-bg border-2 border-solid p-2 border-blue-500 text-blue-500'>
+                <button type='button' className='change-bg border-2 border-solid p-2 border-black' onClick={generateRandomColor}>
                   Change background
                 </button>
               </div>
@@ -76,12 +96,9 @@ const Forminfo = () => {
                         <input type='file' className='hidden' onChange={handleFileChange} />
                       </label>
                     </div>
-                    {[Monster, Monster1, Monster2, Monster3, Monster4, Monster5, Monster6, Monster7, Monster8, Monster9,
-                      Monster10, Monster11, Monster12, Monster13, Monster14, Monster15, Monster16, Monster17, Monster18, Monster19,
-                      Monster20
-                    ].map((img, index) => (
+                    {avatars.map((img, index) => (
                       <div key={index} className='rounded-img cursor-pointer' onClick={() => selectImage(img)}>
-                        <img src={img} alt={`Monster ${index}`} className='w-full' />
+                        <img src={img} alt={`Avatar ${index}`} className='w-full' />
                         {selectedImage === img && <div className='selected-img'>Selecting</div>}
                       </div>
                     ))}
@@ -100,14 +117,14 @@ const Forminfo = () => {
                   <input type='text' name='lastName' className='input-form' />
                 </div>
               </div>
-              <div className='flex gap-4'>
+              <div className='flex gap-4 justify-between'>
                 <div className='flex flex-col'>
                   <label>Day of birth</label>
-                  <input type='date' name='dob' className='input-form' />
+                  <input type='date' name='dob' className='input-form w-56' />
                 </div>
                 <div className='flex flex-col'>
                   <label>Gender</label>
-                  <select name='gender' className='input-form h-9'>
+                  <select name='gender' className='input-form h-12 w-56'>
                     <option value='male'>Male</option>
                     <option value='female'>Female</option>
                   </select>
@@ -121,16 +138,20 @@ const Forminfo = () => {
                 <label>Your phone number</label>
                 <input type='text' name='phone' className='input-form'/>
               </div>
-              <div className='flex flex-col'>
-                <label>Your ID</label>
-                <input type='text' name='id' className='input-form'/>
-              </div>
-              <div className='flex flex-col'>
-                <label>Company number</label>
-                <input type='text' name='companyNumber' className='input-form'/>
-                <p className='text-red-600'>Contact HR or manager to get company number.</p>
-              </div>
-              <button type='submit' className='p-2 bg-blue-500 text-white mt-4'>Submit</button>
+              {role === 'admin' && (
+                <>
+                  <div className='flex flex-col'>
+                    <label>Your ID</label>
+                    <input type='text' name='id' className='input-form'/>
+                  </div>
+                  <div className='flex flex-col'>
+                    <label>Company number</label>
+                    <input type='text' name='companyNumber' className='input-form'/>
+                    <p className='text-red-600'>Contact HR or manager to get company number.</p>
+                  </div>
+                </>
+              )}
+              <button type='submit' className='btn p-3 rounded-lg bg-black text-white'>Save</button>
             </div>
           </div>
         </form>

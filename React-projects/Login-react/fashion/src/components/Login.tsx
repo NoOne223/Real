@@ -28,13 +28,13 @@ const Login: React.FC<LoginProps> = ({ onFormSwitch }) => {
   };
 
   return (
-    <div className='flex items-center h-screen bg-blue-300'>
+    <div className='login-bg flex items-center h-screen'>
       <div className='mx-auto'>
-        <form className='form flex flex-col gap-y-5 bg-red-300' onSubmit={(e) => e.preventDefault()}>
+        <form className='form flex flex-col gap-y-5 bg-white' onSubmit={(e) => e.preventDefault()}>
           <div className='text-center'>
-            <h4 className='text-5xl font-bold text-white'>Welcome</h4>
+            <h4 className='text-5xl font-bold'>Welcome</h4>
             <select
-              className='select text-blue-500 mt-3 border-pink-400 border-2 border-solid rounded-md py-1 px-3'
+              className='select mt-3 border-2 border-solid rounded-md py-1 px-3'
               value={role}
               onChange={handleRoleChange}
             >
@@ -43,9 +43,9 @@ const Login: React.FC<LoginProps> = ({ onFormSwitch }) => {
             </select>
           </div>
           <div className='flex flex-col gap-y-2'>
-            <span className='text-white'>Username</span>
+            <span className=''>Username</span>
             <input
-              className='input-form text-blue-500'
+              className='input-form'
               type='text'
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -53,9 +53,9 @@ const Login: React.FC<LoginProps> = ({ onFormSwitch }) => {
             />
           </div>
           <div className='flex flex-col gap-y-2'>
-            <span className='text-white'>Password</span>
+            <span className=''>Password</span>
             <input
-              className='input-form text-blue-500'
+              className='input-form'
               type='password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -65,9 +65,9 @@ const Login: React.FC<LoginProps> = ({ onFormSwitch }) => {
           {role === 'admin' && (
             <div className='admin-key'>
               <div className='flex flex-col gap-y-2'>
-                <span className='text-white'>Admin key</span>
+                <span className=''>Admin key</span>
                 <input
-                  className='input-form text-blue-500 w-1/3 text-center'
+                  className='input-form w-1/3 text-center'
                   type='text'
                   value={adminKey}
                   onChange={(e) => setAdminKey(e.target.value)}
@@ -77,7 +77,7 @@ const Login: React.FC<LoginProps> = ({ onFormSwitch }) => {
             </div>
           )}
           <div>
-            <button className='btn bg-blue-500 text-white w-full uppercase' onClick={handleLogin}>
+            <button className='btn bg-black text-white w-full uppercase' onClick={handleLogin}>
               Log in
             </button>
           </div>

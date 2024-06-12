@@ -9,34 +9,41 @@ import Forminfo from './components/Forminfo';
 
 function App() {
   const [showSignup, setShowSignup] = useState(false);
+  const [signedUp, setSignedUp] = useState(false);
+  const [role, setRole] = useState<string>(''); // Ensure role is typed as a string
 
   const handleFormSwitch = () => {
     setShowSignup(!showSignup);
   };
 
-  const handleSignupSuccess = () => {
+  const handleSignupSuccess = (userRole: string) => {
     setShowSignup(false);
+    setSignedUp(true);
+    setRole(userRole);
   };
 
   return (
-    // <AuthProvider>
-    //   <Router>
-    //     <Routes>
-    //       <Route path="/login" element={
-    //         showSignup ? (
-    //           <Signup onFormSwitch={handleFormSwitch} onSignupSuccess={handleSignupSuccess} />
-    //         ) : (
-    //           <Login onFormSwitch={handleFormSwitch} />
-    //         )
-    //       } />
-    //       <Route path="/main" element={<Mainpage />} />
-    //       <Route path="*" element={<Navigate to="/login" />} />
-    //     </Routes>
-    //   </Router>
-    // </AuthProvider>
-    <div>
-      <Forminfo></Forminfo>
-    </div>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route
+            path="/login"
+            element={
+              signedUp ? (
+                <Navigate to="/forminfo" />
+              ) : showSignup ? (
+                <Signup onFormSwitch={handleFormSwitch} onSignupSuccess={handleSignupSuccess} />
+              ) : (
+                <Login onFormSwitch={handleFormSwitch} />
+              )
+            }
+          />
+          <Route path="/main" element={<Mainpage />} />
+          <Route path="/forminfo" element={<Forminfo role={role} />} />
+          <Route path="*" element={<Navigate to="/login" />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 
