@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.input-form{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.btn{
+    border: 1px solid transparent;
+    border-radius: 15px;
+    padding: 8px;
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+    border-radius: 5px;
+}
+.form{
+    width: 700px;
+    padding: 70px;
+    border-radius: 15px;
+}
+.form-click:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.info-form{
+    width: 1213px;
+    padding: 70px;
+}
+.grid-area{
+    display: grid;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+    gap: 15px;
+}
+.rounded-img{
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: white;
+    padding: 55px;
+    cursor: pointer;
+    position: relative;
+}
+.select-img{
+    background-color: white;
+    padding: 50px 15px;
+    border: 2px solid black;
+    border-radius: 15px;
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    top: 25%;
+    height: 400px;
+    overflow-y: auto;
+}
+.selected-img{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    padding: 30px;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    color: #fabf12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+.avt{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 50px;
+    width: 50%;
+    position: relative;
+}
+.avt:hover .layout{
+    display: block;
+    cursor: pointer;
+}
+.change-bg:hover, .change-avt:hover{
+    background-color: rgb(59, 130, 246);
+    color: white;
+}
+.avt-layout{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 50px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+}
