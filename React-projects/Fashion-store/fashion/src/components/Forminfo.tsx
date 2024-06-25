@@ -1,4 +1,5 @@
-import React, { FormEvent, useState } from 'react';
+// Forminfo.tsx
+import React, { FormEvent, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
   Monster, Monster1, Monster2, Monster3, Monster4, 
@@ -7,6 +8,7 @@ import {
   Monster15, Monster16, Monster17, Monster18, Monster19,
   Monster20,
 } from '../assets/img/Image';
+import { UserContext } from './User/UserContext';
 
 interface ForminfoProps {
   role: string;
@@ -19,7 +21,10 @@ const Forminfo: React.FC<ForminfoProps> = ({ role }) => {
   const [customImage, setCustomImage] = useState<string | ArrayBuffer | null>(null);
   const [dob, setDob] = useState('');
   const [dobError, setDobError] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
 
   const toggleImageSelector = () => {
     setShowImageSelector(!showImageSelector);
@@ -77,6 +82,11 @@ const Forminfo: React.FC<ForminfoProps> = ({ role }) => {
       setDobError('You must 16 or higher');
       return;
     }
+    const userData = {
+    name: `${firstName} ${lastName}`,
+    avatar: selectedImage
+    };
+    setUser(userData);
     navigate('/main', { state: { role } });
   };
 
@@ -132,11 +142,23 @@ const Forminfo: React.FC<ForminfoProps> = ({ role }) => {
               <div className='flex gap-4'>
                 <div className='flex flex-col'>
                   <label>First name</label>
-                  <input type='text' name='firstName' className='input-form' />
+                  <input 
+                    type='text' 
+                    name='firstName' 
+                    className='input-form' 
+                    value={firstName} 
+                    onChange={(e) => setFirstName(e.target.value)}
+                  />
                 </div>
                 <div className='flex flex-col'>
                   <label>Last name</label>
-                  <input type='text' name='lastName' className='input-form' />
+                  <input 
+                    type='text' 
+                    name='lastName' 
+                    className='input-form' 
+                    value={lastName} 
+                    onChange={(e) => setLastName(e.target.value)}
+                  />
                 </div>
               </div>
               <div className='flex gap-4 justify-between'>

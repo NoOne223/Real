@@ -32,6 +32,7 @@ const Login: React.FC<LoginProps> = ({ onFormSwitch }) => {
       <div className='mx-auto'>
         <form className='form flex flex-col gap-y-5 bg-white z-10 relative' onSubmit={(e) => e.preventDefault()}>
           <div className='text-center'>
+            <p>Sorry for the inconvenience, but please log in first ! Thank you !</p>
             <h4 className='text-5xl font-bold'>Welcome</h4>
             <select
               className='select mt-3 border-2 border-solid rounded-md py-1 px-3'

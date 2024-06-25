@@ -1,4 +1,6 @@
 import React from 'react';
+import UserProp from '../components/User/UserProp';
+
 
 export const AdminContent: React.FC = () => (
   <div>
@@ -10,11 +12,7 @@ export const AdminContent: React.FC = () => (
 export const UserContent: React.FC = () => (
   <div>
     {
-      <div className='container'>
-        <div>
-          <h1 className='uppercase font-pata text-3xl'>Welcome to our store</h1>
-        </div>
-      </div>
+      <UserProp />
     }
   </div>
 );

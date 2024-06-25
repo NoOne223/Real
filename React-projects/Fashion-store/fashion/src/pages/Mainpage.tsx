@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import UserHeader from '../components/UserHeader';
+import UserHeader from '../components/User/UserHeader';
 import { AdminContent, UserContent } from './ContentComponents';
 
 const Mainpage: React.FC = () => {
