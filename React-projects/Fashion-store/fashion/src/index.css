@@ -180,3 +180,135 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.product-area{
+    box-shadow: 0px 0px 5px 0px black;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.product-area img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.buy-btn, .add-btn{
+    background-color: black;
+    color: white;
+    width: 50%;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 5px;
+    border: 2px solid transparent;
+}
+.buy-btn:hover, .add-btn:hover{
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border: 2px solid black;
+}
+.grid{
+    grid-template-columns: 24% 24% 24% 24%;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+.price-tag{
+    display: inline-block;
+    width: 110px;
+    height: 38px;
+    text-align: center;
+    background-color: red;
+    -webkit-border-radius: 3px 4px 4px 3px;
+    -moz-border-radius: 3px 4px 4px 3px;
+    border-radius: 3px 4px 4px 3px;
+    border-left: 1px solid red;
+    margin-left: 19px;
+    position: absolute;
+    color: white;
+    line-height: 38px;
+    padding: 0 10px 0 10px;
+    top: 11%;
+    left: 65%;
+    rotate: 90deg;
+}
+.price-tag:before{
+    content: "";
+    position: absolute;
+    display: block;
+    left: -19px;
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-right: 19px solid red; 
+}
+.price-tag:after{
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    display: block;
+    position: absolute;
+    left: -9px;
+    top: 17px;
+}
+#New .fa-gem{
+    color: #55badd;
+}
+#New .absolute{
+    left: 35%;
+    top: 63%;
+}
+.out-sold{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(250, 250, 250, 0.5);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.amount i{
+    border: 1px solid rgb(163, 161, 161);
+    padding: 5px;
+    cursor: pointer;
+}
+.amount input{
+    border: 1px solid rgb(163, 161, 161);
+    padding: 1px;
+    max-width: 40px;
+    text-align: center;
+}
+.tab-buttons{
+    border-bottom: 1px solid black;
+}
+.tab-btn{
+    padding: 10px;
+    min-width: 150px;
+    text-transform: uppercase;
+}
+.tab-btn.active{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+.color-selected{
+    border: 3px solid black;
+}
+.color-tab{
+    cursor: pointer;
+}
+.border-red {
+    border-color: red;
+}
+.border-yellow {
+    border-color: yellow;
+} 
+.border-pink {
+    border-color: pink;
+}  
+.border-brown {
+    border-color: brown;
+}
+  

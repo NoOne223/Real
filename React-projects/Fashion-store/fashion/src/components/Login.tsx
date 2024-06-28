@@ -2,12 +2,11 @@ import React, { useState, ChangeEvent } from 'react';
 import { useAuth } from '../components/AuthContext';
 import 'firebase/auth';
 import firebase from './Firebase';
+import { Link } from 'react-router-dom';
 
-interface LoginProps {
-  onFormSwitch: () => void;
-}
+interface LoginProps {}
 
-const Login: React.FC<LoginProps> = ({ onFormSwitch }) => {
+const Login: React.FC<LoginProps> = ({}) => {
   const [role, setRole] = useState('user');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -83,13 +82,13 @@ const Login: React.FC<LoginProps> = ({ onFormSwitch }) => {
             </button>
           </div>
           <div className='flex justify-between'>
-            <a
+            <Link
+              to="/signup"
               id='SignupForm'
               className='form-click'
-              onClick={onFormSwitch}
             >
               Didn't have account? Create one!
-            </a>
+            </Link>
             <a className='form-click'>Forgot password?</a>
           </div>
         </form>

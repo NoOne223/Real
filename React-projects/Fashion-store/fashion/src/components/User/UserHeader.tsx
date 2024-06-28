@@ -1,5 +1,5 @@
 // UserHeader.tsx
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { UserContext } from './UserContext';
 import { Monster } from '../../assets/img/Image';
 import { Link } from 'react-router-dom';
@@ -13,6 +13,10 @@ interface UserHeaderProps {
 
 const UserHeader: React.FC<UserHeaderProps> = () => {
   const { user } = useContext(UserContext);
+  const [showLogInfo, setShowLogInfo] = useState(false);
+  const toggleLogInfo = () => {
+    setShowLogInfo(!showLogInfo);
+  };
 
   return (
     <div className='pc-hd bg-black p-5 text-white flex justify-between items-center'>
@@ -21,22 +25,28 @@ const UserHeader: React.FC<UserHeaderProps> = () => {
       </div>
       <div>
         <ul className='flex gap-x-20'>
-          <li className='shop-option'>
-            <a>
+          <Link to="/">
+            <li className='shop-option'>
               <i className="fa-solid fa-house"></i>
               <span className='uppercase font-bold pl-1'>Home</span>
-            </a>
-          </li>
-          <li className='shop-option'>
-            <Link to="/product">
+            </li>
+          </Link>
+          <Link to="/products">
+            <li className='shop-option'>
               <i className="fa-solid fa-shirt"></i>
               <span className='uppercase font-bold pl-1'>Products</span>
-            </Link>
-          </li>
+            </li>
+          </Link>
           <li className='shop-option'>
             <a>
               <i className="fa-solid fa-hand-holding-dollar"></i>
               <span className='uppercase font-bold pl-1'>On sale</span>
+            </a>
+          </li>
+          <li className='shop-option relative'>
+            <a>
+              <i className="fa-solid fa-meteor"></i>
+              <span className='uppercase font-bold pl-1'>New Arrival</span>
             </a>
           </li>
           <li className='shop-option relative'>
@@ -49,10 +59,20 @@ const UserHeader: React.FC<UserHeaderProps> = () => {
         </ul>
       </div>
       <div className='user-info w-24 text-center'>
-        <div className='rounded-img'>
+        <div className='rounded-img' onClick={toggleLogInfo}>
           <img src={user?.avatar || Monster} alt='User Avatar' />
         </div>
         <span>{user?.name || 'Name'}</span>
+        <div className={`bg-white text-black p-3 rounded-md absolute w-28 border-4 border-solid border-gray-400 ${showLogInfo ? '' : 'hidden'} log-info`}>
+          <ul className='list-none'>
+            <li>
+              <Link to="/login">Log in</Link>
+            </li>
+            <li>
+              <Link to="/signup">Sign up</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

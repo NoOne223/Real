@@ -33,3 +33,4 @@ export { default as Trouser } from './trouser.png';
 export { default as Jacket } from './jacket.png';
 export { default as Clothing } from './clothing.png';
 export { default as Acess } from './accessory.jpg';
+export { default as Blank_img } from './blank_img.jpg';

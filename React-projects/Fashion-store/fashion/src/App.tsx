@@ -7,6 +7,7 @@ import { AuthProvider } from './components/AuthContext';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Forminfo from './components/Forminfo';
 import Products from './pages/Products';
+import UserProp from './components/User/UserProp';
 
 function App() {
   const [showSignup, setShowSignup] = useState(false);
@@ -27,22 +28,27 @@ function App() {
     <AuthProvider>
       <Router>
         <Routes>
-          <Route
-            path="/login"
-            element={
-              signedUp ? (
-                <Navigate to="/forminfo" />
-              ) : showSignup ? (
-                <Signup onFormSwitch={handleFormSwitch} onSignupSuccess={handleSignupSuccess} />
-              ) : (
-                <Login onFormSwitch={handleFormSwitch} />
-              )
+          <Route 
+            path="/" 
+            element={signedUp ? 
+              (<Navigate to="/forminfo" />) : 
+              showSignup ? 
+                (<Signup onFormSwitch={handleFormSwitch} onSignupSuccess={handleSignupSuccess} />) : 
+                (<UserProp />)
             }
+          />
+          <Route 
+            path="/login" 
+            element={<Login />} 
+          />
+          <Route
+            path="/signup"
+            element={<Signup onFormSwitch={handleFormSwitch} onSignupSuccess={handleSignupSuccess} />}
           />
           <Route path="/main" element={<Mainpage />} />
           <Route path="/forminfo" element={<Forminfo role={role} />} />
-          <Route path="/products" element={<Products />} /> {/* Ensure this route is defined */}
-          <Route path="*" element={<Navigate to="/login" />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
     </AuthProvider>

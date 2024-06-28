@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent } from 'react';
 import firebase from './Firebase';
+import { Link } from 'react-router-dom';
 require('firebase/auth');
 
 interface SignupProps {
@@ -7,7 +8,7 @@ interface SignupProps {
   onSignupSuccess: (role: string) => void; // Update the type of onSignupSuccess to accept a role
 }
 
-const Signup: React.FC<SignupProps> = ({ onFormSwitch, onSignupSuccess }) => {
+const Signup: React.FC<SignupProps> = ({ onSignupSuccess }) => {
   const [role, setRole] = useState('user');
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
@@ -155,13 +156,14 @@ const Signup: React.FC<SignupProps> = ({ onFormSwitch, onSignupSuccess }) => {
             <button className='btn bg-black text-white w-full uppercase' type='submit'>Sign up</button>
           </div>
           <div className='flex justify-between'>
-            <a
+            <Link
+              to="/login"
               id='LoginForm'
               className='form-click cursor-pointer'
-              onClick={onFormSwitch}
+              // onClick={onFormSwitch}
             >
               Already have an account? Log in!
-            </a>
+            </Link>
           </div>
         </form>
       </div>

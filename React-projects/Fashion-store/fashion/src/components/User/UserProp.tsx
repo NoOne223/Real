@@ -2,10 +2,13 @@ import React from 'react'
 import Carousel from '../Carousel';
 import { Acess, Cap, Clothing, Jacket, Poster1, Poster2, Poster3, Trouser } from '../../assets/img/Image';
 import Userft from '../Userft';
+import UserHeader from './UserHeader';
+import { Link } from 'react-router-dom';
 
 const UserProp = () => {
   return (
     <div>
+        <UserHeader />
         <div className='container text-center mb-6'>
             <h1 className='uppercase font-pata text-6xl'>Welcome to our store</h1>
             <p className='italic mt-3'>
@@ -21,46 +24,46 @@ const UserProp = () => {
             <p>We have a plenty of fashion items with many designs for you to freely choose and mix according to your wishes.</p>
           </div>
           <div className='flex justify-between container'>
-            <a className='bg-white p-4 w-1/6 cursor-pointer'>
+            <Link to="/products" className='bg-white p-4 w-1/6 cursor-pointer'>
               <div>
                 <div>
                   <img className='h-48 object-cover w-full' src={Clothing}></img>
                 </div>
                 <h1 className='uppercase font-pata text-center text-xl mt-3'>Clothing</h1>
               </div>
-            </a>
-            <a className='bg-white p-4 w-1/6 cursor-pointer'>
+            </Link>
+            <Link to="/products" className='bg-white p-4 w-1/6 cursor-pointer'>
               <div>
                 <div>
                   <img className='h-48 object-cover' src={Trouser}></img>
                 </div>
                 <h1 className='uppercase font-pata text-center text-xl mt-3'>Trousers</h1>
               </div>
-            </a>
-            <a className='bg-white p-4 w-1/6 cursor-pointer'>
+            </Link>
+            <Link to="/products" className='bg-white p-4 w-1/6 cursor-pointer'>
               <div>
                 <div>
                   <img className='h-48 object-cover' src={Cap}></img>
                 </div>
                 <h1 className='uppercase font-pata text-center text-xl mt-3'>Hats</h1>
               </div>
-            </a>
-            <a className='bg-white p-4 w-1/6 cursor-pointer'>
+            </Link>
+            <Link to="/products" className='bg-white p-4 w-1/6 cursor-pointer'>
               <div>
                 <div>
                   <img className='h-48 object-cover' src={Jacket}></img>
                 </div>
                 <h1 className='uppercase font-pata text-center text-xl mt-3'>Jackets</h1>
               </div>
-            </a>
-            <a className='bg-white p-4 w-1/6 cursor-pointer'>
+            </Link>
+            <Link to="/products" className='bg-white p-4 w-1/6 cursor-pointer'>
               <div>
                 <div>
                   <img className='h-48 object-cover' src={Acess}></img>
                 </div>
                 <h1 className='uppercase font-pata text-center text-xl mt-3'>Other accessory</h1>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
         <div className='container'>
