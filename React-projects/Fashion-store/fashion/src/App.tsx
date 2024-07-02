@@ -8,6 +8,9 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import Forminfo from './components/Forminfo';
 import Products from './pages/Products';
 import UserProp from './components/User/UserProp';
+import Onsale from './pages/Onsale';
+import Cart from './pages/Cart';
+import Admin from './components/Admin/Admin';
 
 function App() {
   const [showSignup, setShowSignup] = useState(false);
@@ -48,6 +51,9 @@ function App() {
           <Route path="/main" element={<Mainpage />} />
           <Route path="/forminfo" element={<Forminfo role={role} />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/onsale" element={<Onsale />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>

@@ -37,25 +37,26 @@ const UserHeader: React.FC<UserHeaderProps> = () => {
               <span className='uppercase font-bold pl-1'>Products</span>
             </li>
           </Link>
-          <li className='shop-option'>
-            <a>
+          <Link to="/onsale">
+            <li className='shop-option'>
               <i className="fa-solid fa-hand-holding-dollar"></i>
               <span className='uppercase font-bold pl-1'>On sale</span>
-            </a>
-          </li>
+            </li>
+          </Link>
+          
           <li className='shop-option relative'>
             <a>
               <i className="fa-solid fa-meteor"></i>
               <span className='uppercase font-bold pl-1'>New Arrival</span>
             </a>
           </li>
-          <li className='shop-option relative'>
-            <a>
-              <i className="fa-solid fa-cart-shopping"></i>
-              <span className='uppercase font-bold pl-1'>Shopping Cart</span>
-              <span className='shopping-dot'>1</span>
-            </a>
-          </li>
+          <Link to="/cart">
+            <li className='shop-option relative'>
+                <i className="fa-solid fa-cart-shopping"></i>
+                <span className='uppercase font-bold pl-1'>Shopping Cart</span>
+                <span className='shopping-dot'>1</span>
+            </li>
+          </Link>
         </ul>
       </div>
       <div className='user-info w-24 text-center'>
@@ -70,6 +71,9 @@ const UserHeader: React.FC<UserHeaderProps> = () => {
             </li>
             <li>
               <Link to="/signup">Sign up</Link>
+            </li>
+            <li>
+              <Link to="/admin">Admin</Link>
             </li>
           </ul>
         </div>

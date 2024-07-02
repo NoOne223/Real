@@ -1,115 +1,46 @@
-import React from 'react'
-import { Blank_img } from '../../assets/img/Image'
+import React, { useState } from 'react';
+import ProductArea from './ProductArea';
 
-const Trouser = () => {
+
+const Trouser: React.FC = () => {
   return (
-    <div>
-      <div id='Trouser' className='container'>
-          <h4 className='text-6xl font-pata'>Trouser</h4>
-          <div className='mt-10 grid'>
-            <div className='product-area relative'>
-              <img src={Blank_img}></img>
-              <div className='p-4 flex flex-col gap-y-4'>
-                <div className='h-14 text-center'>
-                  <h4 className='text-2xl uppercase font-bold'>Trouser 1</h4>
-                </div>
-                <p className='price'>Price : <span>1,00$</span></p>
-                <div className='amount'>
-                  <i className="minus fa-solid fa-minus"></i>
-                  <input type='text' value={1}></input>
-                  <i className="plus fa-solid fa-plus"></i>
-                </div>
-                <div>
-                  <button className='buy-btn'>
-                  buy
-                  </button>
-                  <button className='add-btn'>
-                  Add to cart
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div id='New' className='product-area relative'>
-              <img src={Blank_img}></img>
-              <div className='p-4 flex flex-col gap-y-4'>
-                <div className='text-center h-14'>
-                  <h4 className='text-2xl uppercase font-bold'>Trouser 2</h4>
-                  <p>
-                    ( NEW <i className="fa-solid fa-gem"></i> )
-                  </p>
-                </div>
-                <p className='price'>Price : <span>2,00$</span></p>
-                <div className='amount'>
-                  <i className="minus fa-solid fa-minus"></i>
-                  <input type='text' value={1}></input>
-                  <i className="plus fa-solid fa-plus"></i>
-                </div>
-                <div>
-                  <button className='buy-btn'>
-                  buy
-                  </button>
-                  <button className='add-btn'>
-                  Add to cart
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div id='Onsale' className='product-area relative'>
-              <img src={Blank_img}></img>
-              <div className='p-4 flex flex-col gap-y-4'>
-                <div className='h-14 text-center'>
-                  <h4 className='text-2xl uppercase font-bold'>Trouser 3</h4>
-                </div>
-                <p className='price'>Price : <span>3,00$</span></p>
-                <div className='amount'>
-                  <i className="minus fa-solid fa-minus"></i>
-                  <input type='text' value={1}></input>
-                  <i className="plus fa-solid fa-plus"></i>
-                </div>
-                <div>
-                  <button className='buy-btn'>
-                  buy
-                  </button>
-                  <button className='add-btn'>
-                  Add to cart
-                  </button>
-                </div>
-              </div>
-              <div className='price-tag'>Sale %</div>
-            </div>
-            <div id='Outsold' className='product-area relative'>
-              <img src={Blank_img}></img>
-              <div className='p-4 flex flex-col gap-y-4'>
-                <div className='h-14 text-center'>
-                  <h4 className='text-2xl uppercase font-bold'>Trouser 4</h4>
-                </div>
-                <p className='price'>Price : <span>4,00$</span></p>
-                <div className='amount'>
-                  <i className="minus fa-solid fa-minus"></i>
-                  <input type='text' value={1}></input>
-                  <i className="plus fa-solid fa-plus"></i>
-                </div>
-                <div>
-                  <button className='buy-btn'>
-                  buy
-                  </button>
-                  <button className='add-btn'>
-                  Add to cart
-                  </button>
-                </div>
-              </div>
-              <div className='out-sold'></div>
-            </div>
-          </div>
-          <div className='mt-8'>
-            <button className='w-full rounded-md border-2 border-solid border-gray-400 p-2 uppercase text-3xl'>
-                See more
-                <i className="fa-solid fa-chevron-down px-4"></i>
-            </button>
-          </div>
+    <div className='container'>
+      <h4 className='text-6xl font-pata'>Trouser</h4>
+      <div id='Clothing' className='mt-10 grid'>
+        <div className='relative'>
+          <ProductArea productName='Product 1' />
         </div>
+        <div className='relative'>
+          <ProductArea productName='Product 2' status='New' />
+        </div>
+        <div className='relative'>
+          <ProductArea productName='Product 3' status='Onsale' />
+        </div>
+        <div className='relative'>
+          <ProductArea productName='Product 4' status='Outsale' />
+        </div>
+      </div>
+      <div className='pagination mt-4'>
+        <ul className='list-none page-list flex gap-x-2 items-center justify-end'>
+          <li className='f-page text-sm text-slate-400 cursor-pointer'>
+            <i className="fa-solid fa-backward"></i>
+          </li>
+          <li className='previous text-slate-400 cursor-pointer'>
+            <i className="fa-solid fa-caret-left"></i>
+          </li>
+          <li className='page-number border border-solid border-slate-400 px-2'>
+            <span className='currentpage'>1</span>/<span className='totalpage'>1</span>
+          </li>
+          <li className='next text-slate-400 cursor-pointer'>
+            <i className="fa-solid fa-caret-right"></i>
+          </li>
+          <li className='l-page text-sm text-slate-400 cursor-pointer'>
+            <i className="fa-solid fa-forward"></i>
+          </li>
+        </ul>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Trouser
+export default Trouser;

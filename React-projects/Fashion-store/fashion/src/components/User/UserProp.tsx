@@ -1,9 +1,10 @@
 import React from 'react'
 import Carousel from '../Carousel';
 import { Acess, Cap, Clothing, Jacket, Poster1, Poster2, Poster3, Trouser } from '../../assets/img/Image';
-import Userft from '../Userft';
+import Userft from './Userft';
 import UserHeader from './UserHeader';
 import { Link } from 'react-router-dom';
+import ScrollTop from '../Scrolltop';
 
 const UserProp = () => {
   return (
@@ -89,9 +90,9 @@ const UserProp = () => {
             </div>
             <div className='w-1/2'>
               <img src={Poster1}></img>
-              <div className='text-center bg-black text-white w-80 m-auto py-2'>
+              {/* <div className='text-center bg-black text-white w-80 m-auto py-2'>
                 <a href=''>See sale up here!</a>
-              </div>
+              </div> */}
             </div>
             <div className='w-1/4'>
               <div>
@@ -117,9 +118,9 @@ const UserProp = () => {
         <div className='container'>
           <div className='text-center'>
             <h1 className='uppercase font-pata text-6xl'>New arrival</h1>
-            <div className='text-center border-2 border-solid border-black w-80 m-auto py-2 mt-4'>
+            {/* <div className='text-center border-2 border-solid border-black w-80 m-auto py-2 mt-4'>
               <a href=''>Look for new arrival here!</a>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className='flex mt-16'>
@@ -130,6 +131,7 @@ const UserProp = () => {
             <img src={Poster3}></img>
           </div>
         </div>
+        <ScrollTop />
         <Userft />
       </div>
   )
