@@ -34,6 +34,9 @@ p{
 .italic{
     font-style: italic;
 }
+.mb-50{
+    margin-bottom: 50px;
+}
 .uppercase{
     text-transform: uppercase;
 }
@@ -87,12 +90,12 @@ p{
     list-style: none;
     padding: 0;
 }
-.header-layout{
-    background-color: hsl(29, 72%, 56%);
+.header-layout, .footer{
+    background-color: hsl(29deg 34.44% 63.32%);
+    color: var(--var--color--bg--text);
 }
 .header-content{
     padding: 15px 20px;
-    color: var(--var--color--bg--text);
 }
 .header-content .font-space{
     font-size: 2rem;
@@ -180,7 +183,7 @@ p{
     background-attachment: fixed;
 }
 .welcome{
-    left: 150px;
+    left: 305px;
     top: 100px;
     z-index: -1;
 }
@@ -248,4 +251,67 @@ p{
 }
 .achivement i{
     font-size: 4.5rem;
+}
+.drop-branches hr{
+    margin-top: 0;
+    background-color: white;
+    border: 1px solid white;
+}
+.drop-branches.active + .branch {
+    display: block;
+}
+.branch-contact{
+    max-width: 450px;
+    min-width: 450px;
+}
+.ft-contact{
+    max-width: 425px;
+}
+.media-contact a{
+    font-size: 25px;
+}
+.branch{
+    display: none;
+}
+.branch p{
+    text-decoration: underline;
+}
+.branch-list{
+    margin-top: 5px;
+}
+.branch-list li{
+    margin: 10px 0px;
+}
+.ft-contact textarea{
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+.footer{
+    padding: 50px 0px;
+}
+.footer .container{
+    margin-top: 0;
+}
+.btn{
+    padding: 10px 15px;
+    width: 150px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 20px;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+.footer .btn{
+    border-radius: 20px;
+}
+.footer .btn:hover{
+    color: white;
+    background-color: hsl(29deg 34.44% 63.32%);
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.copyright{
+    background-color: hsl(29, 43%, 42%);
+    color: var(--var--color--bg--text);
+    padding: 15px;
 }
