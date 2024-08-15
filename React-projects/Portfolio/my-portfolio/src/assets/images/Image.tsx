@@ -1,0 +1,9 @@
+export { default as Image1 } from './img1.png';
+export { default as Image2 } from './img2.png';
+export { default as Image4 } from './img4.png';
+export { default as Image6 } from './img6.png';
+export { default as Image7 } from './img7.png';
+export { default as Viflag } from './vietnam.png';
+export { default as Enflag } from './united-kingdom.png';
+export { default as rocket } from './rocket.png';
+export { default as planet } from './planet.png';
