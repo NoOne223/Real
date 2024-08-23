@@ -5,5 +5,6 @@ export { default as Image6 } from './img6.png';
 export { default as Image7 } from './img7.png';
 export { default as Viflag } from './vietnam.png';
 export { default as Enflag } from './united-kingdom.png';
+export { default as Jaflag } from './japan.png';
 export { default as rocket } from './rocket.png';
 export { default as planet } from './planet.png';

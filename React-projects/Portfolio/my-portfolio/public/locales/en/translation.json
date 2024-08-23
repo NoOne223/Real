@@ -1,0 +1,82 @@
+{
+  "content1": {
+    "title": "Welcome To My Portfolio",
+    "personal_form": {
+      "title": "Personal information",
+      "option_1": {
+        "title": "Name : ",
+        "value": "Lê Hoàng Nam"
+      },
+      "option_2": {
+        "title": "Date of birth : ",
+        "value": "03-09-2001"
+      },
+      "option_3": {
+        "title": "Gender : ",
+        "value": "Male"
+      },
+      "option_4": {
+        "title": "Address : ",
+        "value": "787/1 Truong Chinh street, Tay Thanh ward, Tan Phu distric, Ho Chi Minh city"
+      },
+      "option_5": {
+        "title": "Education : ",
+        "value": "HUIT University"
+      },
+      "option_6": {
+        "title": "Description about me : ",
+        "value_1": "I'm an energetic person. I love learning new things, listening to music, and creating templates on my own.",
+        "value_2": "I am capable of participating in projects, handling tasks flexibly, and collaborating well within a team.",
+        "value_3": "I want to become a master of frontend and fullstack development for future purposes."
+      }
+    }
+  },
+
+  "content2": {
+    "title": "<black>What</black><br/>is my<br/><purple>purpose</purple>",
+    "sub_title": "I want to become <purple>Front-end</purple> developer",
+    "desc_1": "<purple>In present,</purple> I want to find a creative eviroment that I can improve my Front-end skill.",
+    "desc_2": "<purple>In the near future,</purple> I strive to become skilled HTML, CSS, Jquery and one of frameworks like Reactjs.",
+    "desc_3": "<purple>For the further,</purple> I will try to become fullstack developer."
+  },
+
+  "content3": {
+    "title": "Main skills that I have",
+    "desc_1": "I have proficient skills in HTML, allowing me to create well-structured and semantically correct web pages. I can effectively use HTML elements to build responsive layouts, ensuring accessibility and compatibility across different devices and browsers.",
+    "desc_2": "I am comfortable using basic CSS properties such as styling text, backgrounds, and simple layouts. However, I have not yet explored more advanced features like CSS Grid, Flexbox, or complex animations.",
+    "desc_3": "I can work with jQuery for basic tasks like selecting elements, handling events, and manipulating the DOM. However, I'm still learning how to use more advanced features and techniques in jQuery.",
+    "desc_4": "Although I'm relatively new to React, I've managed to create a basic template using React. I'm continuously learning and improving my skills to build more complex React applications in the future.",
+    "desc_5": "I am proficient in using Git commands in both GitLab and GitHub. I can effectively manage repositories, branches, and commits, as well as collaborate with other developers using pull requests, merge requests, and version control best practices. My experience includes handling tasks such as cloning repositories, pushing and pulling changes, resolving conflicts, and reviewing code contributions on these platforms.",
+    "desc_6": "I am proficient in extracting images and their attributes from Figma with precision. I can effectively cut out images, export assets, and gather design specifications, ensuring that all elements are optimized and ready for web or mobile development."
+  },
+
+  "content4": {
+    "title_1": "My React projects",
+    "title_2": "My HTML projects",
+    "blank_project": "Will have in the future",
+    "react": {
+        "project_1": {
+        "title": "Portfolio",
+        "desc": "This is my first React project, so it might be simple and have some mistakes. I would appreciate it if you could point out any improvements I can make."
+      }
+    },
+    "html": {
+        "project_1": {
+        "title": "Portfolio",
+        "desc": "This is my first React project, so it might be simple and have some mistakes. I would appreciate it if you could point out any improvements I can make."
+      }
+    }
+  },
+
+  "content5": {
+    "title": "Thank you !",
+    "desc": "Thank you for your interest and for reading this far. Your support will be the key to my success and to staying steadfast on the path I have chosen. Thank you very much !",
+    "place_holder": "If you have any comments, please write them here",
+    "button": "Submit"
+  },
+
+  "footer": {
+    "desc": "This is my first React project <blue>NamLe</blue> 2024"
+  }
+}
+  

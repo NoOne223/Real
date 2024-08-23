@@ -1,0 +1,82 @@
+{
+    "content1": {
+      "title": "Chào Mừng Đến Với Hồ Sơ Của Tôi",
+      "personal_form": {
+        "title": "Thông Tin Cá Nhân",
+        "option_1": {
+          "title": "Tên : ",
+          "value": "Lê Hoàng Nam"
+        },
+        "option_2": {
+          "title": "Ngày sinh : ",
+          "value": "03-09-2001"
+        },
+        "option_3": {
+          "title": "Giới tính : ",
+          "value": "Nam"
+        },
+        "option_4": {
+          "title": "Địa chỉ : ",
+          "value": "787/1 Đường Trường Chinh, Phường Tây Thanh, Quận Tân Phú, Thành phố Hồ Chí Minh"
+        },
+        "option_5": {
+          "title": "Trình độ học vấn : ",
+          "value": "Đại học HUIT"
+        },
+        "option_6": {
+          "title": "Mô tả về tôi : ",
+          "value_1": "Tôi là một người năng động. Tôi thích học hỏi những điều mới, nghe nhạc và tạo ra các mẫu HTML riêng của mình.",
+          "value_2": "Tôi có khả năng tham gia các dự án, xử lý công việc linh hoạt và hợp tác tốt trong nhóm.",
+          "value_3": "Tôi muốn trở thành một chuyên gia phát triển frontend và fullstack trong tương lai."
+        }
+      }
+    },
+
+  "content2": {
+    "title": "<black>Mục tiêu</black><br>của tôi</br> <br> <purple>là gì</purple>",
+    "sub_title": "Tôi muốn trở thành lập trình viên <br> <purple>Front-end</purple>",
+    "desc_1": "<purple>Hiện tại,</purple> tôi muốn tìm được một môi trường năng động để có thể phát triển thêm bản thân.",
+    "desc_2": "<purple>Trong tương lai gần,</purple> tôi sẽ nỗ lực để trở thành thành thạo trong HTML, CSS, jQuery và một trong các framework như React.js.",
+    "desc_3": "<purple>Với mục tiêu xa hơn,</purple> tôi sẽ cố gắng trở thành lập trình viên fullstack."
+  },
+
+  "content3": {
+    "title": "Những kỹ năng mà tôi có",
+    "desc_1": "Tôi có kỹ năng HTML khá vững chắc, tôi có thể tạo ra các layout có cấu trúc rõ ràng, chính xác. Tôi có thể sử dụng nhiều các phần tử HTML để xây dựng bố cục đáp ứng việc tái sử dụng và tương thích trên nhiều thiết bị và trình duyệt khác nhau.",
+    "desc_2": "Tôi khá tự tin về kỹ năng CSS của mình. Tôi có thể tạo ra các định dạng văn bản, nền và bố cục đơn giản. Tuy nhiên có một vài thứ tôi cần phải học thêm các CSS nâng cao như Grid layout và các hiệu ứng phức tạp.",
+    "desc_3": "Tôi có thể làm việc với JQuery cho các hành động cơ bản như chọn phần tử, xử lý sự kiện và thao tác DOM. Nhưng vẫn còn phải học nhiều hơn.",
+    "desc_4": "Tôi mới tiếp xúc với React nên các kiến thức còn rất mơ hồ nhưng tôi có khả năng tạo được một layout cơ bản. Tôi sẽ cố gắng để có thể thành thạo trong thời gian sắp tới.",
+    "desc_5": "Tôi nắm chắc việc sử dụng các lệnh Git cơ bản trên cả GitLab và GitHub. Tôi có thể quản lý hiệu quả các kho lưu trữ, nhánh, cũng như hợp tác với các lập trìn viên khác thông qua các yêu cầu kéo (pull requests), yêu cầu hợp nhất (merge requests) và các thực tiễn tốt nhất về kiểm soát phiên bản.",
+    "desc_6": "Tôi có thể cắt giao diện và trích xuất hình ảnh cũng như các thuộc tính của chúng từ Figma. Tôi đảm bảo tất cả các yếu tố sẽ được tối ưu hóa và sẵn sàng phát triển cũng như tương thích trên tất cả các nền tảng."
+  },
+
+  "content4": {
+    "title_1": "Các dự án bằng React của tôi",
+    "title_2": "Các dự án bằng HTML của tôi",
+    "blank_project": "Sẽ có trong tương lai",
+    "react": {
+        "project_1": {
+        "title": "Portfolio",
+        "desc": "Đây là dự án React đầu tiên của tôi. Nó khá đơn giản và có thể sẽ có nhiều sự sơ suất. Tôi sẽ rất cảm kích nếu bạn có thể xem qua và góp ý để tôi có thể phát triển hơn tron tương lai."
+      }
+    },
+    "html": {
+        "project_1": {
+        "title": "Portfolio",
+        "desc": "Đây là dự án React đầu tiên của tôi. Nó khá đơn giản và có thể sẽ có nhiều sự sơ suất. Tôi sẽ rất cảm kích nếu bạn có thể xem qua và góp ý để tôi có thể phát triển hơn tron tương lai."
+      }
+    }
+  },
+
+  "content5": {
+    "title": "Cám ơn bạn !",
+    "desc": "Cám ơn bạn đã ghé thăm và bỏ thời gian để đọc đến được đây. Sự ủng hộ của bạn sẽ là chìa khóa dẫn tới sự thành công của tôi và giúp tôi vững bước trên con đường tôi đã chọn. Cám ơn bạn rất nhiều !",
+    "place_holder": "Nếu như có ý kiến về bất kì dự án nào xin hãy để lại ở đây",
+    "button": "Góp ý"
+  },
+
+  "footer": {
+    "desc": "Đây là dự án React đầu tiên <blue>NamLe</blue> 2024"
+  }
+}
+  

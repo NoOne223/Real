@@ -1,47 +1,69 @@
-import React from 'react'
-import { Image1 } from '../images/Image'
-import Lang from './Lang'
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { Image1 } from '../images/Image';
+import Lang from './Lang';
 
-const Content1 = () => {
+const Content1: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className='container relative content1-mb'>
-        <Lang />
-        <h1 className='text-white text-7xl font-bold text-center'>Welcome To My Portfolio</h1>
-        <div className='flex flex-wrap justify-around items-end my-24'>
-            <img className='w-1/4 h-fit' src={Image1}></img>
-            <div className='w-2/5 px-5 rounded-lg text-white'>
-                <h4 className='text-center uppercase text-3xl'>Personal infomation</h4>
-                <ul className='m-auto'>
-                    <li className='my-10'>
-                        <strong className='text-xl text-purple-500'>Name :</strong> <span>Lê Hoàng Nam</span>
-                    </li>
-                    <li className='my-10'>
-                        <strong className='text-xl text-purple-500'>Date of birth :</strong> <span>03-09-2001</span>
-                    </li>
-                    <li className='my-10'>
-                        <strong className='text-xl text-purple-500'>Gender :</strong> <span>Male</span>
-                    </li>
-                    <li className='my-10'>
-                        <strong className='text-xl text-purple-500'>Address :</strong> <span>787/1 Truong Chinh street, Tay Thanh ward, Tan Phu distric, Ho Chi Minh city</span>
-                    </li>
-                    <li className='my-10'>
-                        <strong className='text-xl text-purple-500'>Education :</strong> <span>HUIT University</span>
-                    </li>
-                    <li className='my-10'>
-                        <strong className='text-xl text-purple-500'>Description about me :</strong>
-                        <p>
-                        I'm an energetic person. I love learning new things, listening to music, and creating templates on my own. 
-                        <br></br>
-                        I am capable of participating in projects, handling tasks flexibly, and collaborating well within a team.
-                        <br></br>
-                        I want to become a master of frontend and fullstack development for future purposes. 
-                        </p>
-                    </li>
-                </ul>
-            </div>
+      <Lang />
+      <h1 className='text-white text-7xl font-bold uppercase text-center' data-aos="fade-down">
+        {t('content1.title')}
+      </h1>
+      <div className='flex flex-wrap justify-around items-end my-24'>
+        <img className='w-1/4 h-fit' src={Image1} data-aos="fade-up" alt="Profile" />
+        <div className='w-2/5 px-5 rounded-lg text-white' data-aos="fade-left">
+          <h4 className='text-center uppercase text-3xl'>
+            {t('content1.personal_form.title')}
+          </h4>
+          <ul className='m-auto'>
+            <li className='my-10'>
+              <strong className='text-xl text-purple-400'>
+                {t('content1.personal_form.option_1.title')}
+              </strong> 
+              <span>{t('content1.personal_form.option_1.value')}</span>
+            </li>
+            <li className='my-10'>
+              <strong className='text-xl text-purple-400'>
+                {t('content1.personal_form.option_2.title')}
+              </strong> 
+              <span>{t('content1.personal_form.option_2.value')}</span>
+            </li>
+            <li className='my-10'>
+              <strong className='text-xl text-purple-400'>
+                {t('content1.personal_form.option_3.title')}
+              </strong> 
+              <span>{t('content1.personal_form.option_3.value')}</span>
+            </li>
+            <li className='my-10'>
+              <strong className='text-xl text-purple-400'>
+                {t('content1.personal_form.option_4.title')}
+              </strong> 
+              <span>{t('content1.personal_form.option_4.value')}</span>
+            </li>
+            <li className='my-10'>
+              <strong className='text-xl text-purple-400'>
+                {t('content1.personal_form.option_5.title')}
+              </strong> 
+              <span>{t('content1.personal_form.option_5.value')}</span>
+            </li>
+            <li className='my-10'>
+              <strong className='text-xl text-purple-400'>
+                {t('content1.personal_form.option_6.title')}
+              </strong>
+              <p>
+                {t('content1.personal_form.option_6.value_1')}<br />
+                {t('content1.personal_form.option_6.value_2')}<br />
+                {t('content1.personal_form.option_6.value_3')}
+              </p>
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Content1
+export default Content1;
