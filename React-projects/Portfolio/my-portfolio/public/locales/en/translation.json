@@ -34,6 +34,7 @@
 
   "content2": {
     "title": "<black>What</black><br/>is my<br/><purple>purpose</purple>",
+    "title_mobile": "<black>What</black>is my<purple>purpose</purple>",
     "sub_title": "I want to become <purple>Front-end</purple> developer",
     "desc_1": "<purple>In present,</purple> I want to find a creative eviroment that I can improve my Front-end skill.",
     "desc_2": "<purple>In the near future,</purple> I strive to become skilled HTML, CSS, Jquery and one of frameworks like Reactjs.",

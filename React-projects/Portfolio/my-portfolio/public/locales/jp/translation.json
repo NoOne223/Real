@@ -34,6 +34,7 @@
 
   "content2": {
     "title": "<black>私の</black><br>目標は</br> <br> <purple>何です</purple>",
+    "title_mobile": "<black>私の</black>目標は <purple>何です</purple>",
     "sub_title": "<purple>フロントエンド</purple>開発者になりたい",
     "desc_1": "<purple>現在、</purple>私は自分自身をさらに成長させるためにダイナミックな環境を見つけたいと考えています。",
     "desc_2": "<purple>近い将来,</purple> HTML、CSS、jQuery、およびReact.jsなどのフレームワークの1つを習得できるように努力するつもりです。",

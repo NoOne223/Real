@@ -34,6 +34,7 @@
 
   "content2": {
     "title": "<black>Mục tiêu</black><br>của tôi</br> <br> <purple>là gì</purple>",
+    "title_mobile": "<black>Mục tiêu</black>của tôi <purple>là gì</purple>",
     "sub_title": "Tôi muốn trở thành lập trình viên <br> <purple>Front-end</purple>",
     "desc_1": "<purple>Hiện tại,</purple> tôi muốn tìm được một môi trường năng động để có thể phát triển thêm bản thân.",
     "desc_2": "<purple>Trong tương lai gần,</purple> tôi sẽ nỗ lực để trở thành thành thạo trong HTML, CSS, jQuery và một trong các framework như React.js.",

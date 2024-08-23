@@ -5,20 +5,26 @@ import { Image4 } from '../images/Image'
 
 const Content2: React.FC = () => {
   return (
-    <div className='container mt-24 content2-mb'>
-      <div className='my-24 text-white relative z-0'>
-        <div className='flex justify-center items-center' data-aos="fade-right">
-          <div className='border-r-4 border-solid pr-3 w-fit'>
-            <h1 className='text-7xl font-bold uppercase text-end leading-tight'>
+    <div className='container lg:mt-24 sm:mt-0'>
+      <div className='text-white relative z-0 lg:my-24 sm:my-0'>
+        <div className='flex justify-center items-center lg:flex-row sm:flex-col' data-aos="fade-right">
+          <div className='lg:border-r-4 border-solid lg:pr-3 w-fit sm:border-r-0 sm:pr-0'>
+            <h1 className='text-7xl font-bold uppercase text-end leading-tight lg:block sm:hidden'>
             <Trans i18nKey="content2.title" components={{ 
                 black: <span className="text-black" />, 
                 purple: <strong className="text-purple-400" />,
                 br: <br />
             }}/>
             </h1>
+            <h1 className='text-4xl text-center font-bold uppercase lg:hidden'>
+            <Trans i18nKey="content2.title_mobile" components={{ 
+                black: <span className="text-black" />, 
+                purple: <strong className="text-purple-400" />,
+            }}/>
+            </h1>
           </div>
-          <div className='pl-3 w-1/2 leading-10'>
-            <h4 className='text-3xl'>
+          <div className='pl-3 lg:w-1/2 leading-10 sm:w-full'>
+            <h4 className='text-3xl lg:text-start sm:text-center'>
               <Trans i18nKey="content2.sub_title" components={{  
                 purple: <strong className="text-purple-400" />,
                 br: <br />
@@ -40,7 +46,7 @@ const Content2: React.FC = () => {
             </p>
           </div>
         </div>
-        <img className='rocket w-1/4 h-fit absolute -bottom-20 right-0 z-behind' src={Image4} data-aos="fade-up"></img>
+        <img className='rocket lg:w-1/4 h-fit absolute -bottom-20 right-0 z-behind sm:w-full' src={Image4} data-aos="fade-up"></img>
       </div>
     </div>
   )
