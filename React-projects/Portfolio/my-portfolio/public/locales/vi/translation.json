@@ -17,7 +17,7 @@
         },
         "option_4": {
           "title": "Địa chỉ : ",
-          "value": "787/1 Đường Trường Chinh, Phường Tây Thanh, Quận Tân Phú, Thành phố Hồ Chí Minh"
+          "value": "787/1 Đường Trường Chinh, Phường Tây Thạnh, Quận Tân Phú, Thành phố Hồ Chí Minh"
         },
         "option_5": {
           "title": "Trình độ học vấn : ",
@@ -79,4 +79,3 @@
     "desc": "Đây là dự án React đầu tiên <blue>NamLe</blue> 2024"
   }
 }
-  
