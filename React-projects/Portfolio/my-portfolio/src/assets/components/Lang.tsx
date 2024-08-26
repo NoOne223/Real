@@ -20,7 +20,7 @@ const Lang: React.FC<LangProps> = ({ className }) => {
 
   return (
     <div
-      className={`lang-change z-10 flex fixed top-3 right-36 justify-end gap-x-2 ${className}`}
+      className={`lang-change z-10 w-full flex fixed top-3 lg:right-36 sm:right-4 justify-end gap-x-2 ${className}`}
       data-aos="fade-down"
       data-aos-delay="300"
     >

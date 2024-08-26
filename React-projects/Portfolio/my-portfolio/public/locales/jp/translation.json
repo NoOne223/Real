@@ -76,6 +76,10 @@
     "button": "コメント"
   },
 
+  "contact":{
+    "title": "ご興味がございましたら、お気軽にご連絡ください!"
+  },
+
   "footer": {
     "desc": "これは最初の React プロジェクトです <blue>NamLe</blue> 2024"
   }

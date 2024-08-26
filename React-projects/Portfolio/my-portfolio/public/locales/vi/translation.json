@@ -76,6 +76,10 @@
     "button": "Góp ý"
   },
 
+  "contact":{
+    "title": "Nếu bạn thấy thích cứ tự nhiên liên hệ với tôi!"
+  },
+
   "footer": {
     "desc": "Đây là dự án React đầu tiên <blue>NamLe</blue> 2024"
   }

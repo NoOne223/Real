@@ -18,7 +18,7 @@ const Content1: React.FC = () => {
       </h1>
 
       <div className='flex flex-wrap justify-around items-end lg:my-24 lg:flex-row sm:flex-col-reverse sm:my-0'>
-        <img className='lg:w-1/4 h-fit sm:w-full' src={Image1} data-aos="fade-up" alt="Profile" />
+        <img className='lg:w-1/4 h-fit sm:w-1/2 sm:m-auto' src={Image1} data-aos="fade-up" alt="Profile" />
         <div className='lg:w-2/5 px-5 rounded-lg text-white sm:w-full' data-aos="fade-left">
           <h4 className='text-center uppercase text-3xl'>
             {t('content1.personal_form.title')}

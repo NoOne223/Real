@@ -76,6 +76,10 @@
     "button": "Submit"
   },
 
+  "contact":{
+    "title": "If you're interested, feel free to contact me!"
+  },
+
   "footer": {
     "desc": "This is my first React project <blue>NamLe</blue> 2024"
   }
