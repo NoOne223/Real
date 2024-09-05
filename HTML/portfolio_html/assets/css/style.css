@@ -1,0 +1,178 @@
+/* HTML STYLING */
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    --var--color--bgtext: white;
+    --var--color--title: ;
+}
+body a{
+    color: transparent;
+    text-decoration: none;
+}
+h1, h2, h3 , h4, h5, h6{
+    font-family: 'New Amsterdam', sans-serif;
+    letter-spacing: 4px;
+    margin: 15px 0px;
+}
+header{
+    background-color: hsl(166, 16%, 65%);
+    padding: 20px 0px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td{
+    border: 1px solid black;
+    padding: 8px;
+}
+
+/* BASIC CLASSES */
+.text-center{
+    text-align: center;
+}
+.text-justify{
+    text-align: justify;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.text-lg{
+    font-size: 65px;
+}
+.text-md{
+    font-size: 45px;
+}
+.text-xs{
+    font-size: 30px;
+}
+.bg-text{
+    color: var(--var--color--bgtext);
+}
+
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-col{
+    flex-direction: column;
+}
+.flex-item-2{
+    flex: 1 1 auto;
+    width: 45%;
+}
+.flex-item-3{
+    flex: 1 1 auto;
+    width: 30%;
+}
+.flex-item-4{
+    flex: 1 1 auto;
+    width: 23%;
+}
+.justify-center{
+    justify-content: center;
+}
+.items-center{
+    align-items: center;
+}
+.items-end{
+    align-items: end;
+}
+.gap-20{
+    gap: 20px;
+}
+
+.grid-area{
+    display: grid;
+}
+
+.w-full{
+    width: 100%;
+}
+.w-fit{
+    width: fit-content;
+}
+.h-full{
+    height: 100%;
+}
+.h-screen{
+    height: 100vh;
+}
+
+.list-none{
+    list-style: none;
+    padding: 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 10px;
+}
+/* STYLING */
+.spacing{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.banner-1{
+    background: url(../image/banner1.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.border-content{
+    padding: 50px 10px;
+    transition: all 0.5s ease-in-out;
+}
+.border-content img{
+    width: 50%;
+}
+.border-content:hover{
+    background-color: white;
+    border-radius: 20px;
+    transform: scale(1.05);
+}
+.outline-border{
+    border: 5px solid hsl(166, 16%, 65%);
+    padding: 50px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 20px;
+    min-height: 430px;
+}
+.skill-board{
+    border: 1px solid black;
+    padding: 5px;
+    transition: padding 0.5s ease-in-out;
+    min-height: 320px;
+}
+.outline-border:hover{
+    padding: 0;
+}
+.outline-border:hover .skill-board{
+    height: 100%;
+    border: 0;
+    background-color: hsl(166, 16%, 65%);
+    color: var(--var--color--bgtext);
+    padding: 50px;
+    border-radius: 8px;
+}
+
+.project{
+    border: 2px solid #97b4ad;
+    padding: 15px;
+    border-radius: 4px;
+}
+.project h2{
+    color: hsl(166, 16%, 65%);
+}
+.project p{
+    color: black;
+}
+
+.footer{
+    background-color: #97b4ad;
+}
