@@ -3,223 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="./assets/favicon_io/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./assets/favicon_io/favicon.ico">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Portfolio</title>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1 class="uppercase text-lg text-center bg-text m-0">Welcome to my Portfolio</h1>
+        <div class="header-banner">
+            <div class="layout d-flex">
+                <div class="container relative">
+                    <h1 class="text-lg text-center text-color-1 uppercase">Chào mừng bạn ghé đến hồ sơ năng lực của tôi</h1>
+                    <div class="info-board">
+                        <div class="infomation">
+                            <h2 class="text-md text-center uppercase">Thông tin cá nhân</h2>
+                            <ul class="list-none d-flex flex-wrap gap">
+                                <li class="flex-3-item">
+                                    <i class="fa-regular fa-user"></i>
+                                    :
+                                    <span>Lê Hoàng Nam</span>
+                                </li>
+                                <li class="flex-3-item">
+                                    <i class="fa-solid fa-cake-candles"></i>
+                                    :
+                                    <span>03-09-2001</span>
+                                </li>
+                                <li class="flex-3-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    :
+                                    <span>787/1 Trường Chinh, Tây Thạnh, Tân Phú</span>
+                                </li>
+                                <li class="flex-3-item">
+                                    <i class="fa-solid fa-phone"></i>
+                                    :
+                                    <span>098 2582754</span>
+                                </li>
+                                <li class="flex-3-item">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    :
+                                    <a class="text-underline" href="mailto: namle392001@gmail.com">namle392001@gmail.com</a>
+                                </li>
+                                <li class="flex-3-item">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    :
+                                    <a class="text-underline" href="" target="_blank">Facebook</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="btn open-cv">
+                            <i class="fa-regular fa-eye"></i>
+                            <span>Xem CV cá nhân của tôi</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lang">
+            <p class="current-lang d-flex items-center m-0 gap">
+                <img class="lang-img" src="./assets/img/vietnam.png" alt="Vi">
+                Tiếng Việt
+            </p>
+            <ul class="lang-change list-none m-0">
+                <li class="lang-option d-flex items-center gap">
+                    <img class="lang-img" src="./assets/img/vietnam.png" alt="Vi">
+                    Tiếng Việt
+                </li>
+                <li class="lang-option d-flex items-center gap">
+                    <img class="lang-img" src="./assets/img/united-kingdom.png" alt="En">
+                    Tiếng Anh
+                </li>
+            </ul>
         </div>
     </header>
+    
     <main>
-        <div class="container spacing">
-            <div class="d-flex items-end">
-                <iframe src="https://giphy.com/embed/Zmf45OJrZeu7roz4xA" width="480" height="480" frameBorder="0" class="giphy-embed h-full flex-item-2" 
-                allowFullScreen></iframe>
-                <div class="flex-item-2">
-                    <h4 class="uppercase text-md">Hello !</h4>
-                    <ul class="list-none">
-                        <li>
-                            <p>
-                                My name is <strong>Le Hoang Nam</strong>
-                            </p>
+        <div class="cv-letter">
+            <div class="cv-header d-flex items-center gap">
+                <img class="avt" src="./assets/img/man.png" alt="cv avt">
+                <div>
+                    <h4 class="text-md m-0 uppercase">Lê Hoàng Nam</h4>
+                    <ul class="list-none d-flex flex-wrap gap">
+                        <li class="flex-3-item">
+                            <i class="fa-solid fa-cake-candles"></i>
+                            :
+                            <span>03-09-2001</span>
                         </li>
-                        <li>
-                            <p>
-                                And I'm <strong>23</strong> years old
-                            </p>
+                        <li class="flex-3-item">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            :
+                            <a class="text-underline" href="" target="_blank">Facebook</a>
                         </li>
-                        <li>
-                            <p>
-                                I was born at <strong>03/09/2001</strong> and my gender is <strong>Male</strong>
-                            </p>
+                        <li class="flex-3-item">
+                            <i class="fa-solid fa-phone"></i>
+                            :
+                            <a href="tel: 0982582754">098 2582754</a>
                         </li>
-                        <li>
-                            <p>
-                                I was a student of <strong>HUIT University</strong> from 2019
-                            </p>
+                        <li class="flex-3-item">
+                            <i class="fa-regular fa-envelope"></i>
+                            :
+                            <a class="text-underline" href="mailto: namle392001@gmail.com">namle392001@gmail.com</a>
                         </li>
-                        <li>
-                            <p>
-                                I am a quite active and energetic person. I have many hobbies such as listening to music, playing games, socializing, exploring, and learning 
-                                new things. But above all, I enjoy being creative. I spend most of my free time creating HTML interfaces. I have had experience working at a company, 
-                                but it was not for a long time. I am looking for a dynamic workplace where I can continue to develop myself in the field I am working in.
-                            </p>
+                        <li class="flex-2-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            :
+                            <span>787/1 Trường Chinh, Tây Thạnh, Tân Phú</span>
                         </li>
                     </ul>
                 </div>
             </div>
-        </div>
-
-        <div class="banner-1 h-screen d-flex">
-            <div class="container">
-                <h2 class="uppercase text-md">My purpose</h2>
-                <div class="d-flex gap-20 spacing">
-                    <div class="border-content flex-item-3 text-center">
-                        <img src="./assets/image/junior.png" alt="Junior">
-                        <h4 class="text-xs">Currently</h4>
-                        <p>
-                            I want to further develop my front-end experience and skills as much as possible by gaining experience in a real-world environment. A place where I can 
-                            both learn and contribute a bit of my own effort.
-                        </p>
-                    </div>
-                    <div class="border-content flex-item-3 text-center">
-                        <img src="./assets/image/web-development.png" alt="Pro">
-                        <h4 class="text-xs">Near future</h4>
-                        <p>
-                            I want to become proficient in basic skills such as HTML, CSS, and jQuery. Additionally, I want to master one of the frameworks like PHP or React.js.
-                        </p>
-                    </div>
-                    <div class="border-content flex-item-3 text-center">
-                        <img src="./assets/image/developer.png" alt="Fullstack">
-                        <h4 class="text-xs">Further</h4>
-                        <p>
-                            I will strive to become a Fullstack Developer. This is my ultimate goal to remind myself to push harder every day.
-                        </p>
-                    </div>
+            <div class="cv-content d-flex">
+                <div class="cv-content-intro">
+                    <ul class="list-none">
+                        <li>
+                            <h5 class="text-xs uppercase">Học vấn</h5>
+                            <p>Đại học Công Thương TP.HCM (HUIT University)</p>
+                        </li>
+                        <li>
+                            <h5 class="text-xs uppercase">Sở thích</h5>
+                            <ul class="inline-list">
+                                <li>
+                                    <p><i class="fa-solid fa-music text-color-2 m-15"></i>Nghe nhạc</p>
+                                </li>
+                                <li>
+                                    <p><i class="fa-solid fa-book-open text-color-2 m-15"></i>Tìm hiểu kiến thức mới</p>
+                                </li>
+                                <li>
+                                    <p><i class="fa-solid fa-globe text-color-2 m-15"></i>Ngoại ngữ</p>
+                                </li>
+                                <li>
+                                    <p><i class="fa-solid fa-utensils text-color-2 m-15"></i>Đồ ăn ngon</p>
+                                </li>
+                                <li>
+                                    <p><i class="fa-solid fa-umbrella-beach text-color-2 m-15"></i>Đi biển</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5 class="text-xs uppercase">Mô tả sơ lược bản thân</h5>
+                            <p>
+                                Tôi là một người hòa đồng và hoạt bát, dễ dàng làm quen và hợp tác với các đồng nghiệp khác. Là một người thích học hỏi những thứ mới 
+                                để không ngừng nâng cấp bản thân. Có trách nhiệm trong công việc.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cv-content-ability">
+                    <ul class="list-none">
+                        <li>
+                            <h5 class="text-xs uppercase">Các kỹ năng</h5>
+                            <div class="d-flex flex-wrap gap">
+                                <div class="skill-desc flex-3-item">
+                                    <p class="uppercase"><strong>Kỹ năng</strong></p>
+                                    <p>
+                                        Mô tả kỹ năng
+                                    </p>
+                                </div>
+                                <div class="skill-desc flex-3-item">
+                                    <p class="uppercase"><strong>Kỹ năng</strong></p>
+                                    <p>
+                                        Mô tả kỹ năng
+                                    </p>
+                                </div>
+                                <div class="skill-desc flex-3-item">
+                                    <p class="uppercase"><strong>Kỹ năng</strong></p>
+                                    <p>
+                                        Mô tả kỹ năng
+                                    </p>
+                                </div>
+                                <div class="skill-desc flex-3-item">
+                                    <p class="uppercase"><strong>Kỹ năng</strong></p>
+                                    <p>
+                                        Mô tả kỹ năng
+                                    </p>
+                                </div>
+                                <div class="skill-desc flex-3-item">
+                                    <p class="uppercase"><strong>Kỹ năng</strong></p>
+                                    <p>
+                                        Mô tả kỹ năng
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h5 class="text-xs uppercase">Kinh nghiệm</h5>
+                            <ul class="custom-list">
+                                <li>
+                                    <p>Nghe nhạc</p>
+                                </li>
+                                <li>
+                                    <p>Tìm hiểu kiến thức mới</p>
+                                </li>
+                                <li>
+                                    <p>Ngoại ngữ</p>
+                                </li>
+                                <li>
+                                    <p>Đồ ăn ngon</p>
+                                </li>
+                                <li>
+                                    <p>Đi biển</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5 class="text-xs uppercase">Các dự án</h5>
+                            <p>
+                                Các dự án của tôi nằm ở trong link portfolio này. Bạn có thể xem qua!
+                            </p>
+                        </li>
+                        <li>
+                            <h5 class="text-xs uppercase">Mong muốn</h5>
+                            <ul class="custom-list">
+                                <li>
+                                    <p>Nghe nhạc</p>
+                                </li>
+                                <li>
+                                    <p>Tìm hiểu kiến thức mới</p>
+                                </li>
+                                <li>
+                                    <p>Ngoại ngữ</p>
+                                </li>
+                                <li>
+                                    <p>Đồ ăn ngon</p>
+                                </li>
+                                <li>
+                                    <p>Đi biển</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
+            <button type="button" class="btn close-cv">
+                <i class="fa-regular fa-eye-slash"></i>
+                Đóng CV của tôi
+            </button>
         </div>
-
-        <div class="container spacing">
-            <h2 class="uppercase text-md">What I can do</h2>
-            <div class="d-flex gap-20">
-                <div class="outline-border flex-item-3">
-                    <div class="skill-board">
-                        <h4 class="uppercase text-xs text-center">HTML</h4>
+        <div class="layout cv-layout"></div>
+        <h2 class="uppercase text-lg text-color-2 text-center m-0">Các dự án</h2>
+        <div class="container">
+            <h4 class="text-md text-color-2">HTML</h4>
+            <div class="project-board d-flex flex-wrap">
+                <a class="flex-4-item" href="../spa/index.html" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Spa</h4>
                         <p>
-                            I have the ability to design and create high-quality, reusable UI components using HTML. My designs ensure both a consistent user experience 
-                            and efficient development through well-structured and maintainable code.
+                            Mô tả quá trình tạo ra dự án
                         </p>
                     </div>
-                </div>
-                <div class="outline-border flex-item-3">
-                    <div class="skill-board">
-                        <h4 class="uppercase text-xs text-center">CSS</h4>
+                </a>
+                <a class="flex-4-item" href="#" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Tên dự án</h4>
                         <p>
-                            I am proficient in using CSS to design and style web interfaces. I have solid experience with fundamental and advanced CSS techniques and Media Queries. 
-                            I can create responsive and visually appealing designs.
+                            Mô tả quá trình tạo ra dự án
                         </p>
                     </div>
-                </div>
-                <div class="outline-border flex-item-3">
-                    <div class="skill-board">
-                        <h4 class="uppercase text-xs text-center">JQuery</h4>
+                </a>
+                <a class="flex-4-item" href="#" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Tên dự án</h4>
                         <p>
-                            I can use basic jQuery effectively. This includes manipulating DOM elements, handling events, and performing animations. 
-                            My understanding of jQuery fundamentals enables me to integrate interactive features into web projects efficiently.
+                            Mô tả quá trình tạo ra dự án
                         </p>
                     </div>
-                </div>
-                <div class="outline-border flex-item-3">
-                    <div class="skill-board">
-                        <h4 class="uppercase text-xs text-center">React</h4>
+                </a>
+                <a class="flex-4-item" href="#" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Tên dự án</h4>
                         <p>
-                            I am proficient in using basic React. I am familiar with components, state management, props, and lifecycle methods, allowing me to build interactive 
-                            user interfaces efficiently.
+                            Mô tả quá trình tạo ra dự án
                         </p>
                     </div>
-                </div>
-                <div class="outline-border flex-item-3">
-                    <div class="skill-board">
-                        <h4 class="uppercase text-xs text-center">Git</h4>
-                        <p>
-                            I am capable of using basic Git commands such as git init, git clone, git add, git commit, git push, git pull, and git status to manage 
-                            version control and collaborate effectively in development projects.
-                        </p>
-                    </div>
-                </div>
-                <div class="outline-border flex-item-3">
-                    <div class="skill-board">
-                        <h4 class="uppercase text-xs text-center">Figma</h4>
-                        <p>
-                            I am able to convert interfaces from Figma into code. With experience in translating design into functional and responsive websites, 
-                            I can ensure that the final product matches the original design accurately.
-                        </p>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
-
-        <div class="container spacing">
-            <h2 class="uppercase text-md">Languages</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Reading</th>
-                        <th>Writing</th>
-                        <th>Listening</th>
-                        <th>Speaking</th>
-                        <th>Certificate</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>English</td>
-                        <td>Good</td>
-                        <td>Good</td>
-                        <td>Good</td>
-                        <td>Good</td>
-                        <td>Toeic 755</td>
-                    </tr>
-                    <tr>
-                        <td>Japanese</td>
-                        <td>Good</td>
-                        <td>Good</td>
-                        <td>Good</td>
-                        <td>Good</td>
-                        <td>N5</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="container">
+            <h4 class="text-md text-color-2">Bootstrap</h4>
+            <div class="project-board d-flex flex-wrap">
+                <a class="flex-4-item" href="#" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Tên dự án</h4>
+                        <p>
+                            Mô tả quá trình tạo ra dự án
+                        </p>
+                    </div>
+                </a>
+                <a class="flex-4-item" href="#" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Tên dự án</h4>
+                        <p>
+                            Mô tả quá trình tạo ra dự án
+                        </p>
+                    </div>
+                </a>
+                <a class="flex-4-item" href="#" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Tên dự án</h4>
+                        <p>
+                            Mô tả quá trình tạo ra dự án
+                        </p>
+                    </div>
+                </a>
+                <a class="flex-4-item" href="#" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Tên dự án</h4>
+                        <p>
+                            Mô tả quá trình tạo ra dự án
+                        </p>
+                    </div>
+                </a>
+            </div>
         </div>
-
-        <div class="container spacing">
-            <h2 class="uppercase text-md">My projects</h2>
-            <div class="d-flex gap-20">
-                <a class="project flex-item-3" href="#">
-                    <h2 class="text-xs">Project 1</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dicta consequuntur perferendis qui corporis cum, inventore eaque 
-                        officia magnam fugiat. Architecto id est maxime enim, commodi corrupti animi fugit magnam?
-                    </p>
+        <div class="container">
+            <h4 class="text-md text-color-2">React</h4>
+            <div class="project-board d-flex flex-wrap">
+                <a class="flex-4-item" href="#" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Tên dự án</h4>
+                        <p>
+                            Mô tả quá trình tạo ra dự án
+                        </p>
+                    </div>
                 </a>
-                <a class="project flex-item-3" href="#">
-                    <h2 class="text-xs">Project 1</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dicta consequuntur perferendis qui corporis cum, inventore eaque 
-                        officia magnam fugiat. Architecto id est maxime enim, commodi corrupti animi fugit magnam?
-                    </p>
+                <a class="flex-4-item" href="#" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Tên dự án</h4>
+                        <p>
+                            Mô tả quá trình tạo ra dự án
+                        </p>
+                    </div>
                 </a>
-                <a class="project flex-item-3" href="#">
-                    <h2 class="text-xs">Project 1</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dicta consequuntur perferendis qui corporis cum, inventore eaque 
-                        officia magnam fugiat. Architecto id est maxime enim, commodi corrupti animi fugit magnam?
-                    </p>
+                <a class="flex-4-item" href="#" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Tên dự án</h4>
+                        <p>
+                            Mô tả quá trình tạo ra dự án
+                        </p>
+                    </div>
+                </a>
+                <a class="flex-4-item" href="#" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Tên dự án</h4>
+                        <p>
+                            Mô tả quá trình tạo ra dự án
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <h4 class="text-md text-color-2">Full-stack</h4>
+            <div class="project-board d-flex flex-wrap">
+                <a class="flex-4-item" href="#" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Tên dự án</h4>
+                        <p>
+                            Mô tả quá trình tạo ra dự án
+                        </p>
+                    </div>
+                </a>
+                <a class="flex-4-item" href="#" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Tên dự án</h4>
+                        <p>
+                            Mô tả quá trình tạo ra dự án
+                        </p>
+                    </div>
+                </a>
+                <a class="flex-4-item" href="#" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Tên dự án</h4>
+                        <p>
+                            Mô tả quá trình tạo ra dự án
+                        </p>
+                    </div>
+                </a>
+                <a class="flex-4-item" href="#" target="_blank">
+                    <div class="project-detail text-center">
+                        <h4 class="text-xs">Tên dự án</h4>
+                        <p>
+                            Mô tả quá trình tạo ra dự án
+                        </p>
+                    </div>
                 </a>
             </div>
         </div>
     </main>
-
     <footer>
-        <div class="footer">
+        <div class="footer-layout text-color-1">
             <div class="container">
-                <div>
-                    <h2 class="text-md">Contact me !</h2>
-                    
+                <div class="d-flex justify-between">
+                    <div class="flex-2-item">
+                        <h4 class="uppercase text-md">Lời cảm ơn</h4>
+                        <p>
+                            Cảm ơn bạn đã ghé thăm trang hồ sơ năng lực của tôi. Nếu bạn có góp ý với các dự án của tôi xin hãy cho tôi biết qua email của tôi, facebook hoặc ngay 
+                            trên hồ sơ năng lực của tôi để mọi người có thể đọc và học hỏi thêm. Tôi sẽ cố gắng hơn trong các dự án tiếp. Hi vọng bạn có một ngày tốt lành.
+                        </p>
+                    </div>
+                    <div class="flex-2-item">
+                        <h4 class="uppercase text-md">Hòm góp ý</h4>
+                        <div class="textarea-container">
+                            <textarea class="comment-input" id="myTextarea" placeholder=" "></textarea>
+                            <label for="myTextarea" class="placeholder">Viết góp ý ở đây</label>
+                        </div>
+                        <button class="btn cmt-btn">Góp ý<i class="fa-regular fa-comment-dots"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./assets/js/main.js"></script>
 </html>
